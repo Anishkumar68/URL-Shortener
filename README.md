@@ -181,12 +181,5 @@ pytest
 
 ## 📌 Notes
 
-- This is a minimal version using in-memory dictionaries. In production, replace with a real database like Redis or PostgreSQL.
+- This is a minimal version using in-memory dictionaries. In production, need to replace with a real database like Redis or PostgreSQL (you can use your favorite ORM).
 - The short codes are generated using Base62 encoding of an incrementing counter.
-
-```
-
----
-
-
-```
