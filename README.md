@@ -9,16 +9,16 @@ A simple and lightweight URL shortener service built using **FastAPI**. It suppo
 
 ## 🚀 Features
 
-- ✅ Shorten long URLs via API (`POST /shorten`)
-- ✅ Redirect to original URLs via short code (`GET /<short_code>`)
-- ✅ Log visitor metadata:
+- Shorten long URLs via API (`POST /shorten`)
+- Redirect to original URLs via short code (`GET /<short_code>`)
+- Log visitor metadata:
   - IP Address
   - Device Type & Browser
   - Approximate Location (via IP geolocation API)
   - Timestamp (UTC, timezone-aware)
-- ✅ View analytics (`GET /stats/<short_code>`)
-- ✅ Rate limiting to prevent abuse (5 requests/min per IP)
-- ✅ In-memory storage (no database setup required)
+- View analytics (`GET /stats/<short_code>`)
+- Rate limiting to prevent abuse (5 requests/min per IP)
+- In-memory storage (no database setup required)
 
 ---
 
@@ -30,10 +30,6 @@ A simple and lightweight URL shortener service built using **FastAPI**. It suppo
 - **Requests** (for geolocation API)
 - **user-agents** (for parsing device/browser info)
 - **Pytest** (for unit testing)
-
----
-
-Great question! Here's what your **full project structure** will look like — including all files and folders — assuming you're using `.venv` for your virtual environment and everything is inside a folder named `URL-Shortener`.
 
 ---
 
@@ -51,7 +47,7 @@ URL-Shortener/
 
 ---
 
-### 🔹 Explanation of Each File
+### Explanation of Each File
 
 | File/Folder        | Purpose                                                                      |
 | ------------------ | ---------------------------------------------------------------------------- |
@@ -96,9 +92,9 @@ Visit: [http://localhost:8000/docs](http://localhost:8000/docs) for interactive 
 
 ---
 
-## 📬 API Usage Examples
+## API Usage Examples
 
-### 🔹 Shorten a URL
+### Shorten a URL
 
 `POST /shorten`
 
@@ -120,14 +116,14 @@ Visit: [http://localhost:8000/docs](http://localhost:8000/docs) for interactive 
 
 ---
 
-### 🔹 Redirect to Original
+### Redirect to Original
 
 `GET /a`  
 Redirects to `https://example.com` and logs the visit.
 
 ---
 
-### 🔹 Get Analytics
+### Get Analytics
 
 `GET /stats/a`
 
@@ -152,7 +148,7 @@ Redirects to `https://example.com` and logs the visit.
 
 ---
 
-## ✅ Run Unit Tests
+## Run Unit Tests
 
 ```bash
 pytest test_main.py
@@ -162,10 +158,10 @@ pytest test_main.py
 
 ## 🔐 Security & Privacy
 
-- ✅ All inputs validated using `pydantic.HttpUrl`
-- ✅ Rate limited to 5 requests per minute per IP
-- ✅ No exact GPS or street-level location data stored
-- ✅ Ethical logging principles followed
+- All inputs validated using `pydantic.HttpUrl`
+- Rate limited to 5 requests per minute per IP
+- No exact GPS or street-level location data stored
+- Ethical logging principles followed
 
 ---
 
@@ -192,5 +188,5 @@ pytest
 
 ---
 
-Would you like me to create a `requirements.txt` file for you too? Or zip the whole project structure ready for upload/email submission?
+
 ```
