@@ -35,7 +35,7 @@ A simple and lightweight URL shortener service built using **FastAPI**. It suppo
 
 ## 🗂️ Final Project Structure
 
-```plaintext
+```
 URL-Shortener/
 ├── .venv/                    # (Your virtual environment - DO NOT zip this!)
 ├── main.py                   # Main FastAPI app file
@@ -63,7 +63,7 @@ URL-Shortener/
 
 1. **Clone the repo:**
 
-```bash
+```
 git clone https://github.com/your-username/url-shortener.git
 cd url-shortener
 ```
@@ -71,20 +71,21 @@ cd url-shortener
 
 2. **Create a virtual environment:**
 
-```bash
+```
 python -m venv venv
-source venv/bin/activate  # Windows: venv\Scripts\activate
+Windows: .\venv\Scripts\activate #only for winodows
+# Linux: source venv/bin/activate
 ```
 
 3. **Install dependencies:**
 
-```bash
+```
 pip install -r requirements.txt
 ```
 
 4. **Run the application:**
 
-```bash
+```
 uvicorn main:app --reload
 ```
 
@@ -150,7 +151,7 @@ Redirects to `https://example.com` and logs the visit.
 
 ## Run Unit Tests
 
-```bash
+```
 pytest test_main.py
 ```
 
