@@ -1,10 +1,10 @@
-from time import time
 from fastapi import FastAPI, HTTPException, Request
 from fastapi.responses import RedirectResponse
 from pydantic import BaseModel, HttpUrl
 from typing import Dict
 from user_agents import parse
 import string
+from time import time
 import requests
 from datetime import datetime, timezone
 
@@ -91,7 +91,9 @@ def get_visitor_info(request: Request) -> dict:
 
     try:
         location_data = requests.get(f"http://ip-api.com/json/{ip}").json()
-        location = f"{location_data.get('city')}, {location_data.get('country')}"
+        city = location_data.get("city") or "Unknown"
+        country = location_data.get("country") or "Unknown"
+        location = f"{city}, {country}"
     except:
         location = "Unknown"
 

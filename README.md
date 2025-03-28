@@ -37,7 +37,7 @@ A simple and lightweight URL shortener service built using **FastAPI**. It suppo
 
 ```
 URL-Shortener/
-├── .venv/                    # (Your virtual environment - DO NOT zip this!)
+├── .venv/                    # (Your virtual environment (ignore it while using git or file sharing)!)
 ├── main.py                   # Main FastAPI app file
 ├── test_main.py              # Pytest unit tests
 ├── README.md                 # Project documentation
