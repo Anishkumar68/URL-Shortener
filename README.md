@@ -147,6 +147,8 @@ Redirects to `https://example.com` and logs the visit.
 }
 ```
 
+When you're running the app locally, every request is from `127.0.0.1`, and most public APIs (like ip-api.com) can’t geolocate private or local IPs.
+
 ---
 
 ## Run Unit Tests

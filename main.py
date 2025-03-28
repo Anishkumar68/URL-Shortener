@@ -63,6 +63,9 @@ def check_rate_limit(ip: str):
 
 @app.post("/shorten")
 async def shorten_url(request: URLRequest, req: Request):
+    """
+    takes input a long url, returns a short url
+    """
     client_ip = req.client.host
     check_rate_limit(client_ip)
     global counter
@@ -81,6 +84,9 @@ async def shorten_url(request: URLRequest, req: Request):
 
 
 def get_visitor_info(request: Request) -> dict:
+    """
+    returns visitor info
+    """
     ip = request.client.host
     user_agent = request.headers.get("user-agent", "")
     parsed_ua = parse(user_agent)
@@ -108,6 +114,10 @@ def get_visitor_info(request: Request) -> dict:
 
 @app.get("/{short_code}")
 async def redirect(short_code: str, request: Request):
+    """
+    redirects to original url
+    and logs visitor info
+    """
     check_rate_limit(request.client.host)
     if short_code not in url_db:
         raise HTTPException(status_code=404, detail="Short URL not found")
@@ -124,6 +134,10 @@ async def redirect(short_code: str, request: Request):
 
 @app.get("/stats/{short_code}")
 async def get_stats(short_code: str):
+    """
+    returns stats
+    """
+
     if short_code not in url_db:
         raise HTTPException(status_code=404, detail="Short URL not found")
 
